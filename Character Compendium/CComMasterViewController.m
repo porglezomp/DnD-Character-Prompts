@@ -7,7 +7,8 @@
 //
 
 #import "CComMasterViewController.h"
-
+#import "Character.h"
+#import "CharacterCell.h"
 #import "CComDetailViewController.h"
 
 @interface CComMasterViewController () {
@@ -26,14 +27,21 @@
     [super awakeFromNib];
 }
 
+- (NSMutableArray *)objects {
+    if (!_objects) {
+        _objects = [[NSMutableArray alloc] initWithObjects:
+                    [[Character alloc] initWithName:@"Caleb Jones" andDescription:@"A programmer making this app!"],
+                    [[Character alloc] initWithName:@"Bob" andDescription:@"A piece of placeholder text!"],
+                    nil];
+    }
+    return _objects;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    
     self.detailViewController = (CComDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -43,15 +51,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
-{
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
+//- (void)insertNewObject:(id)sender
+//{
+//    if (!_objects) {
+//        _objects = [[NSMutableArray alloc] init];
+//    }
+//    [_objects insertObject:[NSDate date] atIndex:0];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//}
 
 #pragma mark - Table View
 
@@ -62,15 +70,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return self.objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    CharacterCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Characters" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    Character *object = self.objects[indexPath.row];
+    cell.detailLabel.text = object.description;
+    cell.nameLabel.text = object.name;
+    //cell.portraitImage.image = object.portrait;
     return cell;
 }
 
@@ -83,7 +93,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [self.objects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -109,7 +119,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *object = _objects[indexPath.row];
+        NSDate *object = self.objects[indexPath.row];
         self.detailViewController.detailItem = object;
     }
 }
@@ -118,7 +128,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
+        NSDate *object = self.objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
