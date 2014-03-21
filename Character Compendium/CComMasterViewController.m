@@ -30,6 +30,8 @@
 - (NSMutableArray *)objects {
     if (!_objects) {
         _objects = [[NSMutableArray alloc] initWithObjects:
+                    [[Character alloc] initWithName:@"Vonten Brin" andDescription:@"Vonten wears dirty grey rags, but always has a splash of color somewhere – dropped handkerchiefs, scarves, and other small things found in the market. Vonten is very friendly and cheerful, and loves meeting new people. He generally doesn't ask for anything, but usually manages to get it anyway."],
+                    [[Character alloc] initWithName:@"Lord Denfall" andDescription:@"Lord Denfall is well dressed, even for a lord. He is always wearing immaculately cut suits. He is fastidious in everything, and wants to lead any conversation he's in. He is self absorbed."],
                     [[Character alloc] initWithName:@"Caleb Jones" andDescription:@"A programmer making this app!"],
                     [[Character alloc] initWithName:@"Bob" andDescription:@"A piece of placeholder text!"],
                     nil];
