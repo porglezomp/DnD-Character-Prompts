@@ -7,6 +7,7 @@
 //
 
 #import "CComDetailViewController.h"
+#import "Character.h"
 
 @interface CComDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -34,9 +35,10 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.descriptionText.text = [self.detailItem description];
+        self.titleBar.title = [self.detailItem name];
+        //self.portraitImageView.image = [self.detailItem portrait];
     }
 }
 
@@ -44,6 +46,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    _titleBar.title = [self.detailItem name];
     [self configureView];
 }
 
