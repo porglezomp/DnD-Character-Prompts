@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 CaZaToCo. All rights reserved.
 //
 
-#import "CComMasterViewController.h"
+#import "CharacterMasterViewController.h"
 #import "Character.h"
 #import "CharacterCell.h"
-#import "CComDetailViewController.h"
+#import "CharacterDetailViewController.h"
 
-@interface CComMasterViewController () {
+@interface CharacterMasterViewController () {
     NSMutableArray *_objects;
 }
 @end
 
-@implementation CComMasterViewController
+@implementation CharacterMasterViewController
 
 - (void)awakeFromNib
 {
@@ -30,7 +30,7 @@
 - (NSMutableArray *)objects {
     if (!_objects) {
         _objects = [[NSMutableArray alloc] initWithObjects:
-                    [[Character alloc] initWithName:@"Vonten Brin" andDescription:@"Vonten wears dirty grey rags, but always has a splash of color somewhere – dropped handkerchiefs, scarves, and other small things found in the market. Vonten is very friendly and cheerful, and loves meeting new people. He generally doesn't ask for anything, but usually manages to get it anyway."],
+                    [[Character alloc] initWithName:@"Vonten Brin" andDescription:@"Vonten wears dirty grey rags, but always has a splash of color somewhere – dropped handkerchiefs, scarves, and other small things found in the market. Vonten is very friendly and cheerful, and loves meeting new people. He generally doesn't ask for anything, but usually manages to get it anyway. Vonten wears dirty grey rags, but always has a splash of color somewhere – dropped handkerchiefs, scarves, and other small things found in the market. Vonten is very friendly and cheerful, and loves meeting new people. He generally doesn't ask for anything, but usually manages to get it anyway. Vonten wears dirty grey rags, but always has a splash of color somewhere – dropped handkerchiefs, scarves, and other small things found in the market. Vonten is very friendly and cheerful, and loves meeting new people. He generally doesn't ask for anything, but usually manages to get it anyway. Vonten wears dirty grey rags, but always has a splash of color somewhere – dropped handkerchiefs, scarves, and other small things found in the market. Vonten is very friendly and cheerful, and loves meeting new people. He generally doesn't ask for anything, but usually manages to get it anyway."],
                     [[Character alloc] initWithName:@"Lord Denfall" andDescription:@"Lord Denfall is well dressed, even for a lord. He is always wearing immaculately cut suits. He is fastidious in everything, and wants to lead any conversation he's in. He is self absorbed."],
                     [[Character alloc] initWithName:@"Caleb Jones" andDescription:@"A programmer making this app!"],
                     [[Character alloc] initWithName:@"Bob" andDescription:@"A piece of placeholder text!"],
@@ -44,7 +44,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.detailViewController = (CComDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (CharacterDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,7 +89,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath

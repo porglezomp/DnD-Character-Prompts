@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C044D4318DD35120014C098 /* CategoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C044D4218DD35120014C098 /* CategoryListViewController.m */; };
+		3C044D4618DD3E150014C098 /* SortCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C044D4518DD3E150014C098 /* SortCategory.m */; };
+		3C044D4918DD3E580014C098 /* ImageLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C044D4818DD3E580014C098 /* ImageLabelCell.m */; };
+		3C044D4D18DD47010014C098 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C044D4C18DD47010014C098 /* CategoryViewController.m */; };
 		3CD10B5318D7C30700ACEF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD10B5218D7C30700ACEF97 /* Foundation.framework */; };
 		3CD10B5518D7C30700ACEF97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD10B5418D7C30700ACEF97 /* CoreGraphics.framework */; };
 		3CD10B5718D7C30700ACEF97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD10B5618D7C30700ACEF97 /* UIKit.framework */; };
@@ -15,8 +19,8 @@
 		3CD10B6318D7C30700ACEF97 /* CComAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD10B6218D7C30700ACEF97 /* CComAppDelegate.m */; };
 		3CD10B6618D7C30700ACEF97 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD10B6418D7C30700ACEF97 /* Main_iPhone.storyboard */; };
 		3CD10B6918D7C30700ACEF97 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD10B6718D7C30700ACEF97 /* Main_iPad.storyboard */; };
-		3CD10B6C18D7C30700ACEF97 /* CComMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD10B6B18D7C30700ACEF97 /* CComMasterViewController.m */; };
-		3CD10B6F18D7C30700ACEF97 /* CComDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD10B6E18D7C30700ACEF97 /* CComDetailViewController.m */; };
+		3CD10B6C18D7C30700ACEF97 /* CharacterMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD10B6B18D7C30700ACEF97 /* CharacterMasterViewController.m */; };
+		3CD10B6F18D7C30700ACEF97 /* CharacterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD10B6E18D7C30700ACEF97 /* CharacterDetailViewController.m */; };
 		3CD10B7818D7C30700ACEF97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD10B7718D7C30700ACEF97 /* XCTest.framework */; };
 		3CD10B7918D7C30700ACEF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD10B5218D7C30700ACEF97 /* Foundation.framework */; };
 		3CD10B7A18D7C30700ACEF97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD10B5618D7C30700ACEF97 /* UIKit.framework */; };
@@ -39,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C044D4118DD35120014C098 /* CategoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListViewController.h; sourceTree = "<group>"; };
+		3C044D4218DD35120014C098 /* CategoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryListViewController.m; sourceTree = "<group>"; };
+		3C044D4418DD3E150014C098 /* SortCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SortCategory.h; path = Model/SortCategory.h; sourceTree = "<group>"; };
+		3C044D4518DD3E150014C098 /* SortCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SortCategory.m; path = Model/SortCategory.m; sourceTree = "<group>"; };
+		3C044D4718DD3E580014C098 /* ImageLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageLabelCell.h; path = View/ImageLabelCell.h; sourceTree = "<group>"; };
+		3C044D4818DD3E580014C098 /* ImageLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageLabelCell.m; path = View/ImageLabelCell.m; sourceTree = "<group>"; };
+		3C044D4B18DD47010014C098 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		3C044D4C18DD47010014C098 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		3CD10B4F18D7C30700ACEF97 /* Character Compendium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Character Compendium.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD10B5218D7C30700ACEF97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3CD10B5418D7C30700ACEF97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,10 +63,10 @@
 		3CD10B6218D7C30700ACEF97 /* CComAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CComAppDelegate.m; sourceTree = "<group>"; };
 		3CD10B6518D7C30700ACEF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		3CD10B6818D7C30700ACEF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		3CD10B6A18D7C30700ACEF97 /* CComMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CComMasterViewController.h; sourceTree = "<group>"; };
-		3CD10B6B18D7C30700ACEF97 /* CComMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CComMasterViewController.m; sourceTree = "<group>"; };
-		3CD10B6D18D7C30700ACEF97 /* CComDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CComDetailViewController.h; sourceTree = "<group>"; };
-		3CD10B6E18D7C30700ACEF97 /* CComDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CComDetailViewController.m; sourceTree = "<group>"; };
+		3CD10B6A18D7C30700ACEF97 /* CharacterMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterMasterViewController.h; sourceTree = "<group>"; };
+		3CD10B6B18D7C30700ACEF97 /* CharacterMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterMasterViewController.m; sourceTree = "<group>"; };
+		3CD10B6D18D7C30700ACEF97 /* CharacterDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterDetailViewController.h; sourceTree = "<group>"; };
+		3CD10B6E18D7C30700ACEF97 /* CharacterDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterDetailViewController.m; sourceTree = "<group>"; };
 		3CD10B7618D7C30700ACEF97 /* Character CompendiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Character CompendiumTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD10B7718D7C30700ACEF97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3CD10B7F18D7C30800ACEF97 /* Character CompendiumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Character CompendiumTests-Info.plist"; sourceTree = "<group>"; };
@@ -93,6 +105,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C044D4A18DD3F920014C098 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C044D4118DD35120014C098 /* CategoryListViewController.h */,
+				3C044D4218DD35120014C098 /* CategoryListViewController.m */,
+				3CD10B6A18D7C30700ACEF97 /* CharacterMasterViewController.h */,
+				3CD10B6B18D7C30700ACEF97 /* CharacterMasterViewController.m */,
+				3CD10B6D18D7C30700ACEF97 /* CharacterDetailViewController.h */,
+				3CD10B6E18D7C30700ACEF97 /* CharacterDetailViewController.m */,
+				3C044D4B18DD47010014C098 /* CategoryViewController.h */,
+				3C044D4C18DD47010014C098 /* CategoryViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		3CD10B4618D7C30700ACEF97 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +154,7 @@
 		3CD10B5818D7C30700ACEF97 /* Character Compendium */ = {
 			isa = PBXGroup;
 			children = (
+				3C044D4A18DD3F920014C098 /* Controller */,
 				3CD10B8D18D7C3E200ACEF97 /* iPad */,
 				3CD10B6118D7C30700ACEF97 /* CComAppDelegate.h */,
 				3CDC21C218DAAD3600C46AE8 /* Model */,
@@ -134,10 +162,6 @@
 				3CD10B6418D7C30700ACEF97 /* Main_iPhone.storyboard */,
 				3CDC21C118DAAD3100C46AE8 /* View */,
 				3CD10B6718D7C30700ACEF97 /* Main_iPad.storyboard */,
-				3CD10B6A18D7C30700ACEF97 /* CComMasterViewController.h */,
-				3CD10B6B18D7C30700ACEF97 /* CComMasterViewController.m */,
-				3CD10B6D18D7C30700ACEF97 /* CComDetailViewController.h */,
-				3CD10B6E18D7C30700ACEF97 /* CComDetailViewController.m */,
 				3CDC21C318DAB58F00C46AE8 /* Images.xcassets */,
 				3CD10B5918D7C30700ACEF97 /* Supporting Files */,
 			);
@@ -185,6 +209,8 @@
 			children = (
 				3CDC21BE18DAAD1800C46AE8 /* CharacterCell.h */,
 				3CDC21BF18DAAD1800C46AE8 /* CharacterCell.m */,
+				3C044D4718DD3E580014C098 /* ImageLabelCell.h */,
+				3C044D4818DD3E580014C098 /* ImageLabelCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,6 +220,8 @@
 			children = (
 				3CDC21BB18DAA23000C46AE8 /* Character.h */,
 				3CDC21BC18DAA23000C46AE8 /* Character.m */,
+				3C044D4418DD3E150014C098 /* SortCategory.h */,
+				3C044D4518DD3E150014C098 /* SortCategory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -300,12 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CD10B6C18D7C30700ACEF97 /* CComMasterViewController.m in Sources */,
+				3CD10B6C18D7C30700ACEF97 /* CharacterMasterViewController.m in Sources */,
+				3C044D4918DD3E580014C098 /* ImageLabelCell.m in Sources */,
 				3CDC21BD18DAA23000C46AE8 /* Character.m in Sources */,
-				3CD10B6F18D7C30700ACEF97 /* CComDetailViewController.m in Sources */,
+				3CD10B6F18D7C30700ACEF97 /* CharacterDetailViewController.m in Sources */,
+				3C044D4618DD3E150014C098 /* SortCategory.m in Sources */,
 				3CDC21C018DAAD1800C46AE8 /* CharacterCell.m in Sources */,
+				3C044D4D18DD47010014C098 /* CategoryViewController.m in Sources */,
 				3CD10B6318D7C30700ACEF97 /* CComAppDelegate.m in Sources */,
 				3CD10B5F18D7C30700ACEF97 /* main.m in Sources */,
+				3C044D4318DD35120014C098 /* CategoryListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

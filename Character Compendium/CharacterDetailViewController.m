@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 CaZaToCo. All rights reserved.
 //
 
-#import "CComDetailViewController.h"
+#import "CharacterDetailViewController.h"
 #import "Character.h"
 
-@interface CComDetailViewController ()
+@interface CharacterDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
-@implementation CComDetailViewController
+@implementation CharacterDetailViewController
 
 #pragma mark - Managing the detail item
 

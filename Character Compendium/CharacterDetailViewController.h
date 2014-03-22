@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CComDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface CharacterDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
