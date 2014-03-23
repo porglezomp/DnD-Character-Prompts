@@ -41,13 +41,6 @@
         //self.portraitImageView.image = [self.detailItem portrait];
     }
     
-/*    CGRect contentRect = CGRectZero;
-    for (UIView *view in self.scrollView.subviews) {
-        contentRect = CGRectUnion(contentRect, view.frame);
-    }
-*/
-    self.scrollView.contentSize = CGSizeMake(2000, 2000);
-    
     NSLog(@"%@", NSStringFromCGSize(self.scrollView.contentSize));
 }
 
