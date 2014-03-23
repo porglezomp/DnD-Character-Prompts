@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -332,6 +332,7 @@
                         <outlet property="locationsLabel" destination="Kww-In-6eT" id="svM-8f-zeh"/>
                         <outlet property="portraitImageView" destination="GGc-yD-1FT" id="8dh-CY-jFo"/>
                         <outlet property="raceLabel" destination="K56-tS-ghE" id="uC9-WW-sTW"/>
+                        <outlet property="scrollView" destination="SrU-f8-xr7" id="4t7-VW-Mb3"/>
                         <outlet property="titleBar" destination="Nhh-x0-hbZ" id="aUR-69-4sC"/>
                         <outlet property="typeLabel" destination="5Wu-JI-itU" id="L0w-74-GBG"/>
                     </connections>

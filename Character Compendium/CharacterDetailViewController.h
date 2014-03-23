@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) id detailItem;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleBar;
 @property (weak, nonatomic) IBOutlet UILabel *raceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
