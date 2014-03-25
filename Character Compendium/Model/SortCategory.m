@@ -15,10 +15,17 @@
     return self;
 }
 
--(id) initWithName:(NSString *)name andBackground:(UIImage *)background {
+- (id) initWithName:(NSString *)name andBackground:(UIImage *)background {
     _name = name;
     _background = background;
     return self;
+}
+
+- (NSString*) selected {
+    if (!_selected) {
+        _selected = @"Any";
+    }
+    return _selected;
 }
 
 @end

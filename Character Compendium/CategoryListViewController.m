@@ -16,6 +16,7 @@
 @end
 
 NSMutableArray *_categories;
+long int editline;
 
 @implementation CategoryListViewController
 
@@ -61,24 +62,29 @@ NSMutableArray *_categories;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1 + self.categories.count;
+    if (section == 0) {
+        return 1;
+    } else {
+        return self.categories.count;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ImageLabelCell *cell;
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"CharactersCell" forIndexPath:indexPath];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryCells" forIndexPath:indexPath];
-        cell.Label.text = [self.categories[indexPath.row - 1] name];
+        cell.Label.text = [self.categories[indexPath.row] name];
+        cell.subtitle.text = [self.categories[indexPath.row] selected];
     }
     
     return cell;
@@ -121,7 +127,11 @@ NSMutableArray *_categories;
     return YES;
 }
 */
-
+- (void) selectedCategoryElement:(CategoryViewController *)controller withValue:(NSString *)value {
+    SortCategory *cat = self.categories[editline];
+    [cat setSelected:value];
+    [self.tableView reloadData];
+}
 
 #pragma mark - Navigation
 
@@ -130,8 +140,10 @@ NSMutableArray *_categories;
 {
     if ([[segue identifier] isEqualToString:@"ShowCategory"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        SortCategory *category = self.categories[indexPath.row-1];
+        SortCategory *category = self.categories[indexPath.row];
         [[segue destinationViewController] setCategory: category];
+        [[segue destinationViewController] setDelegate: self];
+        editline = indexPath.row;
     }
 }
 

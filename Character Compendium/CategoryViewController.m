@@ -16,6 +16,7 @@
 
 @end
 
+
 @implementation CategoryViewController
 
 - (void) setCategory:(SortCategory *)category {
@@ -61,21 +62,27 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 10;
+    if (section == 0) return 1;
+    else return 10;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ImageLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryEntry" forIndexPath:indexPath];
-    cell.Label.text = [NSString stringWithFormat:@"Lorem %@", self.category.name];
+    ImageLabelCell *cell;
+    if (indexPath.section == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"Any" forIndexPath:indexPath];
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryEntry" forIndexPath:indexPath];
+        cell.Label.text = [NSString stringWithFormat:@"%@ %li", self.category.name, indexPath.row];
+    }
     // Configure the cell...
     
     return cell;
@@ -119,12 +126,23 @@
 }
 */
 
-/*
 #pragma mark - Navigation
+- (void)tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath *)path {
+    if (path.section == 0) {
+        [self.delegate selectedCategoryElement:self withValue:@"Any"];
+    } else {
+        [self.delegate selectedCategoryElement:self withValue:[NSString stringWithFormat:@"%@ %li", self.category.name, path.row]];
+    }
+
+    [self.navigationController popViewControllerAnimated:YES];
+}
+/*
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSString *itemToPassBack = @"Okay done.";
+    [self.delegate selectedCategoryElement:self withValue:itemToPassBack];
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }

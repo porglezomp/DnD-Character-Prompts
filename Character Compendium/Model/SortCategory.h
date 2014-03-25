@@ -12,8 +12,10 @@
 
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) UIImage* background;
+@property (strong, nonatomic) NSString* selected;
 
 - (id) initWithName: (NSString *) name;
 - (id) initWithName: (NSString *) name andBackground: (UIImage *) background;
+- (NSString*) selected;
 
 @end

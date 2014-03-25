@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "SortCategory.h"
 
+@class CategoryViewController;
+
+@protocol CategoryViewDelegate <NSObject>
+- (void) selectedCategoryElement:(CategoryViewController *)controller withValue:(NSString *)value;
+@end
+
 @interface CategoryViewController : UITableViewController
 
 @property (strong, nonatomic) SortCategory* category;
+@property (nonatomic, weak) id <CategoryViewDelegate> delegate;
 
 - (void) setCategory:(SortCategory *)category;
 @end

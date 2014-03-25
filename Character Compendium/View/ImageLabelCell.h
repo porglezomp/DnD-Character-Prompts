@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *BackgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *Label;
+@property (weak, nonatomic) IBOutlet UILabel *subtitle;
 
 @end
