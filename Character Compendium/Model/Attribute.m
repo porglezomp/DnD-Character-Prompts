@@ -1,19 +1,21 @@
 //
-//  SortCategory.m
+//  Attribute.m
 //  Character Compendium
 //
 //  Created by Caleb Jones on 3/26/14.
 //  Copyright (c) 2014 CaZaToCo. All rights reserved.
 //
 
-#import "SortCategory.h"
 #import "Attribute.h"
+#import "Character.h"
+#import "SortCategory.h"
 
 
-@implementation SortCategory
+@implementation Attribute
 
 @dynamic banner;
 @dynamic name;
-@dynamic attributes;
+@dynamic category;
+@dynamic character;
 
 @end

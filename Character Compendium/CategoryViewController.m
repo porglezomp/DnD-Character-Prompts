@@ -19,7 +19,7 @@
 
 @implementation CategoryViewController
 
-- (void) setCategory:(SortCategory *)category {
+- (void) setCategory:(oldSortCategory *)category {
     if (category != _category) {
         _category = category;
         

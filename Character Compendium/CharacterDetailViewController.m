@@ -40,8 +40,6 @@
         self.titleBar.title = [self.detailItem name];
         //self.portraitImageView.image = [self.detailItem portrait];
     }
-    
-    NSLog(@"%@", NSStringFromCGSize(self.scrollView.contentSize));
 }
 
 - (void)viewDidLoad
@@ -54,7 +52,7 @@
 
 - (void)viewDidLayoutSubviews
 {
-    BOOL restoreVertical;
+    BOOL restoreVertical = NO;
     if ([self.scrollView showsVerticalScrollIndicator]) {
         restoreVertical = YES;
         self.scrollView.showsVerticalScrollIndicator = NO;

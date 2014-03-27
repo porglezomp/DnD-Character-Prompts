@@ -1,21 +1,28 @@
 //
-//  Category.h
+//  SortCategory.h
 //  Character Compendium
 //
-//  Created by Caleb Jones on 3/21/14.
+//  Created by Caleb Jones on 3/26/14.
 //  Copyright (c) 2014 CaZaToCo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface SortCategory : NSObject
+@class Attribute;
 
-@property (strong, nonatomic) NSString* name;
-@property (strong, nonatomic) UIImage* background;
-@property (strong, nonatomic) NSString* selected;
+@interface SortCategory : NSManagedObject
 
-- (id) initWithName: (NSString *) name;
-- (id) initWithName: (NSString *) name andBackground: (UIImage *) background;
-- (NSString*) selected;
+@property (nonatomic, retain) NSString * banner;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSSet *attributes;
+@end
+
+@interface SortCategory (CoreDataGeneratedAccessors)
+
+- (void)addAttributesObject:(Attribute *)value;
+- (void)removeAttributesObject:(Attribute *)value;
+- (void)addAttributes:(NSSet *)values;
+- (void)removeAttributes:(NSSet *)values;
 
 @end

@@ -8,7 +8,7 @@
 
 #import "CategoryListViewController.h"
 #import "CategoryViewController.h"
-#import "SortCategory.h"
+#import "oldSortCategory.h"
 #import "ImageLabelCell.h"
 
 @interface CategoryListViewController ()
@@ -51,10 +51,10 @@ long int editline;
 - (NSMutableArray *)categories {
     if (!_categories) {
         _categories = [[NSMutableArray alloc] initWithObjects:
-                       [[SortCategory alloc] initWithName:@"Location"],
-                       [[SortCategory alloc] initWithName:@"Disposition"],
-                       [[SortCategory alloc] initWithName:@"Purpose"],
-                       [[SortCategory alloc] initWithName:@"Placeholder"], nil];
+                       [[oldSortCategory alloc] initWithName:@"Location"],
+                       [[oldSortCategory alloc] initWithName:@"Disposition"],
+                       [[oldSortCategory alloc] initWithName:@"Purpose"],
+                       [[oldSortCategory alloc] initWithName:@"Placeholder"], nil];
     }
     return _categories;
 }
@@ -128,7 +128,7 @@ long int editline;
 }
 */
 - (void) selectedCategoryElement:(CategoryViewController *)controller withValue:(NSString *)value {
-    SortCategory *cat = self.categories[editline];
+    oldSortCategory *cat = self.categories[editline];
     [cat setSelected:value];
     [self.tableView reloadData];
 }
@@ -140,7 +140,7 @@ long int editline;
 {
     if ([[segue identifier] isEqualToString:@"ShowCategory"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        SortCategory *category = self.categories[indexPath.row];
+        oldSortCategory *category = self.categories[indexPath.row];
         [[segue destinationViewController] setCategory: category];
         [[segue destinationViewController] setDelegate: self];
         editline = indexPath.row;

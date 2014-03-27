@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SortCategory.h"
+#import "oldSortCategory.h"
 
 @class CategoryViewController;
 
@@ -17,8 +17,8 @@
 
 @interface CategoryViewController : UITableViewController
 
-@property (strong, nonatomic) SortCategory* category;
+@property (strong, nonatomic) oldSortCategory* category;
 @property (nonatomic, weak) id <CategoryViewDelegate> delegate;
 
-- (void) setCategory:(SortCategory *)category;
+- (void) setCategory:(oldSortCategory *)category;
 @end
