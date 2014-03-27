@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Attribute" syncable="YES">
+        <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="attributes" inverseEntity="Category" syncable="YES"/>
+        <relationship name="character" maxCount="1" deletionRule="Nullify" destinationEntity="Character" inverseName="attributes" inverseEntity="Character" syncable="YES"/>
+    </entity>
+    <entity name="Category" syncable="YES">
+        <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attribute" inverseName="category" inverseEntity="Attribute" syncable="YES"/>
+    </entity>
+    <entity name="Character" representedClassName="" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="copyright" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="copyright_edited" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="portrait" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attribute" inverseName="character" inverseEntity="Attribute" syncable="YES"/>
+        <relationship name="hometown" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Town" inverseName="characters" inverseEntity="Town" syncable="YES"/>
+    </entity>
+    <entity name="Town" syncable="YES">
+        <attribute name="banner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Character" inverseName="hometown" inverseEntity="Character" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Character" positionX="-45" positionY="-18" width="128" height="148"/>
+        <element name="Attribute" positionX="180" positionY="14" width="72" height="103"/>
+        <element name="Category" positionX="333" positionY="9" width="128" height="88"/>
+        <element name="Town" positionX="169" positionY="203" width="128" height="103"/>
+    </elements>
+</model>

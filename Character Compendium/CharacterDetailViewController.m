@@ -36,7 +36,7 @@
 {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.descriptionText.text = [self.detailItem description];
+        self.descriptionText.text = [self.detailItem bio];
         self.titleBar.title = [self.detailItem name];
         //self.portraitImageView.image = [self.detailItem portrait];
     }

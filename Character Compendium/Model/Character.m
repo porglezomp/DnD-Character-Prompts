@@ -11,16 +11,16 @@
 @implementation Character
 
 - (id) initWithName:(NSString *)name {
-    return [self initWithName:name andDescription:@""];
+    return [self initWithName:name andBio:@""];
 }
 
-- (id) initWithName:(NSString *)name andDescription:(NSString *)description {
-    return [self initWithName:name andDescription:description andPortrait:[UIImage imageWithContentsOfFile:@"Portrait"]];
+- (id) initWithName:(NSString *)name andBio:(NSString *)description {
+    return [self initWithName:name andBio:description andPortrait:[UIImage imageWithContentsOfFile:@"Portrait"]];
 }
 
-- (id) initWithName:(NSString *)name andDescription:(NSString *)description andPortrait:(UIImage *)portrait {
+- (id) initWithName:(NSString *)name andBio:(NSString *)description andPortrait:(UIImage *)portrait {
     _name = name;
-    _description = description;
+    _bio = description;
     _portrait = portrait;
     return self;
 }
